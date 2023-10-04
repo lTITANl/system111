@@ -37,12 +37,13 @@ int main(int argc, char* argv[]) {
         exit(0);
     }
     double a = atof(argv[1]);
+    //실수를 double로 받기 위해서, atof는 부동소수점 반환을 위해 사용
 
     printf("ARCH=%d\n", is64bit() ? 64 : 32);
     printf("ORDERING=%s\n", isBigEndian() ? "BIG_ENDIAN" : "LITTLE_ENDIAN");
 
     printf("MYANS: DEC=%f HEX=", a);
-    isBigEndian() ? be_show_bytes((pointer)&a, sizeof(unsigned int)) : le_show_bytes((pointer)&a, sizeof(unsigned int));
+    isBigEndian() ? be_show_bytes((pointer)&a, sizeof(double)) : le_show_bytes((pointer)&a, sizeof(double));
 
     return 0;
 }
