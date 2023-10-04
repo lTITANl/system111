@@ -36,15 +36,11 @@ int main(int argc, char* argv[]) {
         printf("Usage: ./a.out number\n");
         exit(0);
     }
-    unsigned int a = atoi(argv[1]);
+    double a = atof(argv[1]);
 
     printf("ARCH=%d\n", is64bit() ? 64 : 32);
     printf("ORDERING=%s\n", isBigEndian() ? "BIG_ENDIAN" : "LITTLE_ENDIAN");
 
-    printf("MYANS: DEC=%u HEX=", a);
-    //dec2hex에선느 %d를 작성하여 정수형인식, 여기서는 %u로 실수 인식
-    isBigEndian() ? be_show_bytes((pointer)&a, sizeof(unsigned int)) : le_show_bytes((pointer)&a, sizeof(unsigned int));
-
-    printf("CHECK: DEC=%u HEX=%.8X\n", a, a);
+    printf("MYANS: DEC=%f HEX=", a);
     return 0;
 }
