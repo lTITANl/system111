@@ -41,6 +41,6 @@ int main(int argc, char* argv[]) {
     printf("ARCH=%d\n", is64bit() ? 64 : 32);
     printf("ORDERING=%s\n", isBigEndian() ? "BIG_ENDIAN" : "LITTLE_ENDIAN");
 
-    printf("MYANS: DEC=%f HEX=", a);
+    printf("MYANS: DEC=%f HEX=\n", a);
     return 0;
 }
