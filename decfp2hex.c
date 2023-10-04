@@ -42,5 +42,7 @@ int main(int argc, char* argv[]) {
     printf("ORDERING=%s\n", isBigEndian() ? "BIG_ENDIAN" : "LITTLE_ENDIAN");
 
     printf("MYANS: DEC=%f HEX=\n", a);
+    isBigEndian() ? be_show_bytes((pointer)&a, sizeof(unsigned int)) : le_show_bytes((pointer)&a, sizeof(unsigned int));
+
     return 0;
 }
