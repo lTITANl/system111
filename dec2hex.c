@@ -18,7 +18,6 @@ bool isBigEndian() {
 
 
 void le_show_bytes(pointer ptr, size_t size) {
-    printf("0x");
     for (int i = size - 1; i >= 0; i--) {
         printf("%.2X", ptr[i]);
     }
