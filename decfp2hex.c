@@ -42,7 +42,7 @@ int main(int argc, char* argv[]) {
     printf("ORDERING=%s\n", isBigEndian() ? "BIG_ENDIAN" : "LITTLE_ENDIAN");
 
     printf("MYANS: DEC=%u HEX=", a);
-    //dec2hex에선느 %d를 작성하여 정수형인식
+    //dec2hex에선느 %d를 작성하여 정수형인식, 여기서는 %u로 실수 인식
     isBigEndian() ? be_show_bytes((pointer)&a, sizeof(unsigned int)) : le_show_bytes((pointer)&a, sizeof(unsigned int));
 
     printf("CHECK: DEC=%u HEX=%.8X\n", a, a);
